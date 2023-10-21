@@ -1,0 +1,10 @@
+version: 0.2
+phases:
+    
+    install:
+        command:
+            - pip3 install -U awscli sagemaker numpy pandas matplotlib seaborn jupyter nbconvert
+        
+    build:
+        command:
+            - jupyter nbconvert --to notebook --inplace --excute --ExcutePreprocessor.kernal_name = python3 <filname.ipynb>
